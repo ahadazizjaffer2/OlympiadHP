@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (scrollY >= 250) {
       navCtr.style.justifyContent = "space-between";
-      heading.style.display = "block";
+      heading.style.display = "flex";
     } else {
       navCtr.style.justifyContent = "flex-end";
       heading.style.display = "none";
