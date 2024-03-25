@@ -15,7 +15,7 @@
     <nav>
         <div class="nav-container">
             <a class="heading" href="">
-                <i class="fa-solid fa-crown fa-bounce"></i>
+                <i class="fa-solid fa-crown fa-bounce" ></i>
                 <h2>OLYMPIAD</h2>
             </a>
             <ul class="menu">
@@ -62,14 +62,14 @@
     <section class="highlightshome">
         <h1>Highlights</h1>
         <div class="videocontainer">
-            <div class="videodiv">
-                <video src="videos/button.mp4" loop muted autoplay controls></video>
+            <div class="videodiv" onmouseover="showControls(this)" onmouseleave="hideControls(this)">
+                <video src="videos/button.mp4" loop muted autoplay></video>
             </div>
-            <div class="videodiv">
-                <video src="videos/sidebar.mp4" controls></video>
+            <div class="videodiv" onmouseover="showControls(this)" onmouseleave="hideControls(this)">
+                <video src="videos/sidebar.mp4"></video>
             </div>
-            <div class="videodiv">
-                <video src="videos/productCard.mp4" controls></video>
+            <div class="videodiv" onmouseover="showControls(this)" onmouseleave="hideControls(this)">
+                <video src="videos/productCard.mp4"></video>
             </div>
         </div>
         <div class="seemore">
@@ -114,7 +114,7 @@
           </div>
     </section> -->
 
-    <footer style="background: black;">
+    <footer >
         <div class="container">
             <div class="upper-footer">
                 <div class="footerlogo">
@@ -122,13 +122,17 @@
                 </div>
                 <div class="contact-info">
                     <h2>Contact Us</h2>
+                    <p>Discover more about us! Connect with our team via email or phone.
+                         We're eager to assist you!</p>
                     <div class="column">
+                        <h3>Emails</h3>
                         <ul>
                         <li><a href="mailto:olympiad@nu.edu.pk">olympiad@nu.edu.pk</a></li>
                         <li><a href="mailto:sportics.pr@nu.edu.pk">sportics.pr@nu.edu.pk</a></li>
                         </ul>
                     </div>
                     <div class="column">
+                        <h3>Phone Numbers</h3>
                         <ul>
                         <li><a>+923323787200</a></li>
                         <li><a>+923151173672</a></li>
