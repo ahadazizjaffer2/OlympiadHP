@@ -24,7 +24,6 @@ body::-webkit-scrollbar-thumb{
 }
 
 nav{
-  /* position: fixed; */
   position: sticky;
   z-index: 1000;
   top: -1px;
@@ -50,7 +49,6 @@ nav{
   text-decoration: none;
   color: #FFF;
   transition: all 0.5s ease;
-  /* display: flex; */
 }
 .fa-crown{
   font-size:x-large;
@@ -58,7 +56,7 @@ nav{
   margin: 0px 10px 6px 0px;
   color: goldenrod;
 }
-.menu{
+nav .menu{
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -84,34 +82,53 @@ nav{
   cursor: pointer;
   transition: all 0.5s ease;
 }
+.dropdown{
+  position: fixed;
+  top: 80px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  background: #000728;
+  z-index: 12;
+  transition: all 0.3s ease;
+  list-style: none;
+  display: none;
+}
+.dropdown.open{
+  overflow: hidden;
+  display: block;
+}
+.dropdown .menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+  list-style: none;
+}
 
 @media screen and (max-width: 786px) {
   .buttonbars{
     display: block;
   }
-  .menu{
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    top: 80px;
-    right: 15px;
-    display: none;
-    width: 100%;
-    max-width: 300px;
-    border: 3px solid #fff;
-    border-radius: 10px;
-    padding: 20px;
-    background: #000728;
-    z-index: 12;
-    transition: all 0.3s ease;
-    list-style: none;
-  }
   .menu li a{
     color: white;
     font-weight: bold;
   }
+  nav .menu{
+    display: none;
+  }
 
 }
+
+/* Logo and timer */
+
 .front{
   padding: 20px;
   align-items: center;
@@ -474,7 +491,7 @@ footer {
   position: relative;
   width: 100%;
   color: #fff;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   transition: all 0.5s ease;
   background: #000;
 }
@@ -507,6 +524,8 @@ section h1, footer h1{
   width: 60%; 
   margin: auto;
 }
+
+
 .column {
   width: 50%;
   float: left;
@@ -733,8 +752,8 @@ summary:focus {
   height: auto;
 }
 .videodiv:nth-child(1){
-    grid-row: span 2;
-    grid-column: span 2;
+  grid-row: span 2;
+  grid-column: span 2;
 }
 .videodiv video::-webkit-media-controls {
   display: none;
