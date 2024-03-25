@@ -2,35 +2,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const toggleBtn = document.querySelector('.buttonbars');
   const toggleBtnIcon = document.querySelector('.buttonbars i');
-  const ddown = document.querySelector('.menu');
+  const ddown = document.querySelector('.dropdown');
   const navCtr = document.querySelector('.nav-container');
   const heading = document.querySelector('.heading');
   const nav = document.querySelector('nav');
   const navHeight = nav.offsetHeight;
 
   toggleBtn.onclick = function () {
+    ddown.classList.toggle('open');
+    const isOpen = ddown.classList.contains('open');
 
-    if (ddown.style.display === "none") {
-      ddown.style.display = "flex";
-      toggleBtnIcon.className = 'fa-solid fa-xmark';
-    } else {
-      ddown.style.display = "none";
+    toggleBtnIcon.className = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars';
+  };
+
+  window.addEventListener('resize', function () {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth > 786) {
+      ddown.classList.remove('open');
       toggleBtnIcon.className = 'fa-solid fa-bars';
     }
 
-    window.addEventListener('resize', function () {
-      const screenWidth = window.innerWidth;
-  
-      if (screenWidth < 786) {
-        toggleBtnIcon.className = 'fa-solid fa-bars';
-        ddown.style.display = "none"
-      } else {
-        ddown.style.display = "flex"
-      }
-
-    });
-
-  }
+  });
 
   window.addEventListener('scroll', function () {
     const scrollY = window.scrollY;
