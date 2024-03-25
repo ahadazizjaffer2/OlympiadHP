@@ -476,7 +476,7 @@ footer {
   color: #fff;
   padding-bottom: 40px;
   transition: all 0.5s ease;
-  background: black;  
+  background: #000;
 }
 .footerlogo{
   margin: auto;
@@ -504,7 +504,8 @@ section h1, footer h1{
   padding: 0 10px;
 }
 .contact-info {
-  width: 70%; 
+  width: 60%; 
+  margin: auto;
 }
 
 h2 {
@@ -522,11 +523,14 @@ h2 {
 }
 .column ul li {
   margin-bottom: 5px;
-  text-align: center;
+  text-align: left;
   color: goldenrod;
 }
 .column li a{
   text-decoration: none;
+  color: #f7f7f7;
+}
+.column li a:hover{
   color: goldenrod;
 }
 
@@ -541,7 +545,13 @@ h2 {
 
 footer h2 {
   color: #f7f7f7;
-}  
+  text-align: left;
+}
+footer p{
+  text-align: left;
+  color: #f7f7f7;
+  margin-bottom: 20px;
+}
 .legal {
   font-size: 12px;
 }  
@@ -584,7 +594,16 @@ footer h2 {
   }
   footer h2{
     margin-top: 30px;
+    text-align: center;
   }
+  footer p, footer h3{
+    text-align: center;
+  }
+  .column ul li{
+    text-align: center;
+  }
+  
+
   
 
 }
@@ -728,6 +747,9 @@ summary:focus {
 .videodiv:nth-child(1){
     grid-row: span 2;
     grid-column: span 2;
+}
+.videodiv video::-webkit-media-controls {
+  display: none;
 }
 .seemore{
   padding: 10px;
