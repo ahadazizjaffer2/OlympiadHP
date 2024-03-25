@@ -27,7 +27,7 @@ nav{
   /* position: fixed; */
   position: sticky;
   z-index: 1000;
-  top: 0;
+  top: -1px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -50,6 +50,13 @@ nav{
   text-decoration: none;
   color: #FFF;
   transition: all 0.5s ease;
+  display: flex;
+}
+.fa-crown{
+  font-size:x-large;
+  align-self: center;
+  margin: 0px 10px 6px 0px;
+  color: goldenrod;
 }
 .menu{
   list-style: none;
@@ -458,7 +465,7 @@ section {
 /* Footer */
 
 footer {
-  padding: 60px 10px;
+  padding: 30px 10px;
   position: relative;
   /* left: 0; */
   /* bottom: 12px; */
@@ -468,10 +475,17 @@ footer {
   transition: all 0.5s ease;
   background: black;
 }
+.footerlogo{
+  width: 200px;
+}
+.footerlogo img{
+  width: 150px;
+}
 .contacts {
   display: flex;
   align-content: center;
   justify-content: space-between;
+  gap: 25px;
   margin-top: 30px;
   transition: all 0.5s ease;
 }
@@ -482,7 +496,6 @@ footer {
   justify-content: center;
   color: goldenrod;
 }
-
 .emails a{
   text-decoration: none;
   color: goldenrod;
@@ -498,6 +511,10 @@ section h1,   footer h1{
   border-bottom: 2px solid #3a4f6a;
   padding-bottom: 20px;
   margin: 0 30px;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* align-content: center; */
 }
 .bottom{
   display: flex;
@@ -529,8 +546,12 @@ footer h2 {
   color: #fff;
 }
 
-@media screen and (max-width: 500px){
-
+@media screen and (max-width: 600px){
+  .top{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .bottom {
     gap: 16px;
     flex-direction: column-reverse;
