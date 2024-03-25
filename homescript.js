@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   toggleBtn.onclick = function () {
 
-    // add style to ddown, display should be block
     if (ddown.style.display === "none") {
       ddown.style.display = "flex";
       toggleBtnIcon.className = 'fa-solid fa-xmark';
@@ -45,9 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
-
-
 });
 
 
@@ -78,4 +74,20 @@ var x = setInterval(function() {
 
 function formatTime(time) {
   return time < 10 ? "0" + time : time;
+}
+
+var currentVideo = null;
+
+function showControls(element) {
+  if (currentVideo !== null && currentVideo !== element) {
+    currentVideo.querySelector('video').pause();
+  }
+  currentVideo = element;
+  element.querySelector('video').setAttribute('controls', 'true');
+}
+
+function hideControls(element) {
+  if (currentVideo === element) {
+    currentVideo.querySelector('video').removeAttribute('controls');
+  }
 }
