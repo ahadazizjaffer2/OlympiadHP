@@ -562,13 +562,7 @@ footer {
   .contact-info {
     width: 60%; 
     margin: auto;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
+  }  
   .column {
     width: 50%;
     float: left;
