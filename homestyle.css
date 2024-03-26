@@ -751,6 +751,11 @@ summary:focus {
   width: 100%;
   height: auto;
 }
+.videodiv img{
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
 .videodiv:nth-child(1){
   grid-row: span 2;
   grid-column: span 2;
