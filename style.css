@@ -857,9 +857,13 @@ footer p{
 .caption h3 {
   color: #000728;
 }
+.caption .social-links{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 .caption .social-links a {
   color: #000728;
-  margin-right: 15px;
   font-size: 21px;
   transition: .6s;
 }
