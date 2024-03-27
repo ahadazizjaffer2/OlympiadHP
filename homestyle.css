@@ -486,7 +486,7 @@ section h1{
 
 /* Footer */
 
-footer {
+.olfooter {
   padding: 30px 10px;
   position: relative;
   width: 100%;
@@ -515,7 +515,7 @@ section h1, footer h1{
   padding-bottom: 20px;
   border-bottom: 2px solid #3a4f6a;
 }
-.container {
+.footcontainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
@@ -556,11 +556,11 @@ section h1, footer h1{
   justify-content: space-between;
 }
 
-footer h2 {
+.olfooter h2 {
   color: #f7f7f7;
   text-align: left;
 }
-footer p{
+.olfooter p{
   text-align: left;
   color: #f7f7f7;
   margin-bottom: 20px;
@@ -605,11 +605,11 @@ footer p{
     width: auto;
     margin: 15px 0px;
   }
-  footer h2{
+  .olfooter h2{
     margin-top: 30px;
     text-align: center;
   }
-  footer p, footer h3{
+  .olfooter p, .olfooter h3{
     text-align: center;
   }
   .column ul li{
@@ -803,20 +803,20 @@ summary:focus {
 /* Sponsors List Carousel */
 
 
-.container {
+.spcontainer {
   overflow: hidden;
 }
-.container .slider {
+.spcontainer .slider {
   animation: slidein 30s linear infinite;
   white-space: nowrap;
   margin: 30px 0px;
 }
-.container .slider .logos {
+.spcontainer .slider .logos {
   width: 100%;
   display: inline-block;
   margin: 0px 0;
 }
-.container .slider .logos .fab {
+.spcontainer .slider .logos .fab {
   width: calc(100% / 5);
   /* font-size: 40px; */
   color: #FFF;
@@ -841,7 +841,67 @@ summary:focus {
 }
 
 @media screen  and (max-width: 786px){
-  .container .slider .logos .fab {
+  .spcontainer .slider .logos .fab {
     font-size: 40px;
+  }
+}
+
+/* Early Bird Discount */
+
+.earlybird {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 30px 0px;
+  margin-bottom: 10px;
+}
+.slidetext {
+  animation: scrollText 20s linear infinite;
+  animation-direction: normal; 
+  color: #FFF;
+  width: 160%;
+}
+@keyframes scrollText {
+  0% {
+    transform: translateX(60vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@media screen  and (max-width: 786px){
+
+  .slidetext {
+    animation: scrollText 15s linear infinite;
+  }
+  @keyframes scrollText {
+    0% {
+      transform: translateX(80vw);
+    }
+    100% {
+      transform: translateX(-110vw);
+    }
+  }
+  .earlybird {
+    margin-bottom: 10px;
+  }
+}
+@media screen  and (max-width: 400px){
+  @keyframes scrollText {
+    0% {
+      transform: translateX(90vw);
+    }
+    100% {
+      transform: translateX(-150vw);
+    }
+  }
+  .slidetext {
+    width: 175%;
+  }
+  .earlybird {
+    margin: 20px 0px;
+    margin-bottom: 0px;
   }
 }
