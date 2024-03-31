@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>OLYMPIAD | FAST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+   </head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a class="heading" href="">
+                <i class="fa-solid fa-crown fa-bounce" ></i>
+                <h2>OLYMPIAD</h2>
+            </a>
+            <ul class="menu">
+                <li><a href="./#">Home</a></li>    
+                <li><a href="./competitions.html">Competitions</a></li> 
+                <li><a href="./highlights.html">Highlights</a></li> 
+                <li><a href="./team.html">Team</a></li> 
+                <li><a href="./cart.html"><i class="bx bxs-cart"></i></a></li>
+            </ul>
+            <div class="buttonbars">
+                <i class="fa-solid fa-bars" ></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dropdown">
+        <ul class="menu">
+            <li><a href="./#">Home</a></li>    
+            <li><a href="./competitions.html">Competitions</a></li> 
+            <li><a href="./highlights.html">Highlights</a></li> 
+            <li><a href="./team.html">Team</a></li> 
+            <li><a href="./cart.html"><i class="bx bxs-cart"></i></a></li>
+        </ul>
+    </div>
+    
+    <section>
+        <h1>Highlights</h1>
+        <div class="video-container">
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+            <div class="viddiv">
+                <video src="videos/button.mp4" muted></video>
+            </div>
+        </div>
+    </section>
+
+    <footer >
+        <div class="container">
+            <div class="upper-footer">
+                <div class="footerlogo">
+                <img src="logo.png" alt="Your Website Logo">
+                </div>
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p>Discover more about us! Connect with our team via email or phone.
+                         We're eager to assist you!</p>
+                    <div class="column">
+                        <h3>Emails</h3>
+                        <ul>
+                        <li><a href="mailto:olympiad@nu.edu.pk">olympiad@nu.edu.pk</a></li>
+                        <li><a href="mailto:sportics.pr@nu.edu.pk">sportics.pr@nu.edu.pk</a></li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Phone Numbers</h3>
+                        <ul>
+                            <li><a href="tel:+923323787200">+923323787200</a></li>
+                            <li><a href="tel:+923151173672">+923151173672</a></li>
+                            <li><a href="tel:+923102622710">+923102622710</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="legal">
+                    <span> © 2024 All rights reserved </span>
+                </div>
+                <div class="socials">
+                    <a href="" class="bx bxl-facebook-circle"></a>
+                    <a href="" class="bx bxl-instagram"></a>
+                    <a href="" class="bx bxl-linkedin"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+<script src="script.js"></script>
+<script>
+    var video = document.querySelectorAll('video');
+    video.forEach(play =>play.addEventListener('click', () => {
+        play.classList.toggle('active');
+
+        if(play.paused){
+            play.play();
+        }
+        else{
+            play.pause();
+            play.currentTime = 0;
+        }
+    }));
+   
+</script>
+
+</html>
