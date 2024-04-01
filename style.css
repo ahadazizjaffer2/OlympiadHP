@@ -914,7 +914,7 @@ footer p{
   overflow: hidden;
   border-radius: 1rem;
 }
-.video-container .viddiv video{
+.video-container .viddiv video, .video-container .viddiv img{
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -937,3 +937,8 @@ footer p{
   transform: translate(-50%, -50%) scale(1);
 }
 
+@media screen and (max-width: 786px){
+  .video-container .viddiv .active{
+    width: 90%;
+  }
+}
