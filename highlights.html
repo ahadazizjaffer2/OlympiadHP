@@ -44,31 +44,37 @@
         <h1>Highlights</h1>
         <div class="video-container">
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img1.jpg" alt="">
             </div>
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img2.jpg" alt="">
             </div>
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img3.jpg" alt="">
             </div>
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img4.jpg" alt="">
             </div>
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img10.jpg" alt="">
             </div>
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img6.jpg" alt="">
             </div>
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img7.jpg" alt="">
             </div>
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img8.jpg" alt="">
             </div>
             <div class="viddiv">
-                <video src="videos/button.mp4" muted></video>
+                <img src="highlights/img11.jpg" alt="">
+            </div>
+            <div class="viddiv">
+                <img src="highlights/img5.jpg" alt="">
+            </div>
+            <div class="viddiv">
+                <img src="highlights/img9.jpg" alt="">
             </div>
             <div class="viddiv">
                 <video src="videos/button.mp4" muted></video>
@@ -132,6 +138,10 @@
             play.pause();
             play.currentTime = 0;
         }
+    }));
+    var images = document.querySelectorAll('img');
+    images.forEach(img => img.addEventListener('click', () => {
+        img.classList.toggle('active');
     }));
    
 </script>
